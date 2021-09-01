@@ -1,9 +1,11 @@
 class Player
 {
-    constructor
-     {  this.index=null()
-        this.distance=0()
-        this.name.null()  }
+    constructor()
+     {  
+        this.index=null
+        this.distance=0
+        this.name=null
+      }
     
     
 
@@ -28,7 +30,7 @@ updateCount(count)
 update()
 {
     var playerIndex="players/player"+this.index
-    database.ref('playerIndex).update({
+    database.ref(playerIndex).update({
 name:this.name,
 distance:this.distance
 

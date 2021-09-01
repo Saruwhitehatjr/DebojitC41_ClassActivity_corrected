@@ -6,6 +6,7 @@ function setup(){
     createCanvas(500,500);
    database=firebase.database();
    game=new Game();
+ 
    game.getState();
    game.start();
 
@@ -16,6 +17,7 @@ function setup(){
 };
 
 function draw(){
+    background(255)
     if(playerCount===4){
             game.update(1);
         }

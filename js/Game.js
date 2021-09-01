@@ -18,6 +18,8 @@ class Game{
     {
       database.ref('/').update({
           gameState:state
+          
+         
       })
     }
   async  start()
@@ -44,17 +46,19 @@ player.getPlayerInfo();
 
 if(allPlayers!=undefined)
 {
-    varypos=130;
+    var ypos=130;
 
     for(var plr in allPlayers)
     {
         if(plr==="player"+player.index)
-        {FileList("red")}
+        {fill("red")}
         else
-        (fill("black"))
+        {fill("black")}
+        textSize(15)
+        text(allPlayers[plr].name+":"+allPlayers[plr].distance,120,ypos)
+        ypos+=30
     }
 }
-text(allPlayers,120,130)
 
     if(keyIsDown(UP_ARROW))
     {
